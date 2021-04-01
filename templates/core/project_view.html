@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %} {% endblock %}
+{% block body %}
+<style>
+  dt{
+    font-size: 20px;
+  }
+  dd{
+    font-size: 18px;
+  }
+
+</style>
+<section class="section" id="about">
+  <div class="container">
+    <div class="row">
+
+         <dl class="dl-horizontal">
+         <dt style="font-size: 29px; padding-bottom: 2em; font-family: sans-serif;">
+         {{ project_obj.Title_of_your_project }}</dt>
+         <dt>Question or Problem </dt>
+         <dd>{{ project_obj.Question_or_Problem }}</dd><br>
+         <dt>Hypothesis or possible solution </dt>
+         <dd>{{ project_obj.Hypothesis_or_possible_solution}}</dd><br>
+         <dt>Materials needed</dt>
+         <dd>{{ project_obj.Materials_needed }}</dd><br>
+         <dt>Results</dt>
+         <dd>{{ project_obj.Results }}</dd><br>
+         <dt>Image of Project</dt>
+         <dd><br>
+          <img
+              src="{{ project_obj.Image_of_Project }}"
+              width="400px"
+              height="400px"
+              alt="project_image"
+            /></dd><br>
+         <dt>Demo Video Link</dt>
+         <dd><a href="{{ project_obj.Link_of_your_project }}"
+          >{{ project_obj.Link_of_your_project }}</a
+        ></dd><br>
+      </dl>
+    
+    </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block extra_js %} {% endblock %}

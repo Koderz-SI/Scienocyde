@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %} {% endblock %}
+{% block body %}
+<section class="section" id="about">
+  <div class="container">
+    <div class="row">
+      {% for project in projects %}
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
+      >
+        <div class="features-item">
+          <div class="features-icon">
+            <h2>{{ forloop.counter }}</h2>
+            <img
+              src="{{ project.Image_of_Project }}"
+              width="200px"
+              height="100px"
+              alt="project_image"
+            />
+            <h4>{{ project.Title_of_your_project }}</h4>
+            <p>{{ project.Question_or_Problem }}</p>
+            <a href="{% url 'project_view' project.id %}" class="main-button">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block extra_js %} {% endblock %}

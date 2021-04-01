@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+
+<style>
+  th,
+  td {
+    border-bottom: 3px solid rgba(241, 85, 106, 1);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+    height: 50px;
+  }
+</style>
+{% endblock %} {% block body %}
+
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" id="about">
+  <div class="container">
+    <table style="width: 100%">
+      <tr>
+        <th>S.No.</th>
+        <th>Organization</th>
+        <th>Hosting Date</th>
+        <th>Details</th>
+      </tr>
+      {% for host in hosts %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ host.org }}</td>
+        <td>{{ host.date|date:"d-m-Y" }}</td>
+        <td><a href="{% url 'applyto' host.id %}">Apply</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+<!-- ***** Features Big Item End ***** -->
+
+{% endblock %} {% block extra_js %} {% endblock %}

@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: sanskritikushik23@gmail.com
+Date: Fri, 12 Mar 2021 19:45:39 -0000
+Message-ID: <161557833980.4112.9447089198315868253@Sanskriti>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/NA/ajfcu3-30815252a0ff0ab0e359e601ec96d075/
+
+Your username, in case you’ve forgotten: yashi
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
