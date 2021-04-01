@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %} {% endblock %}
+{% block body %}
+
+<style>
+   @media screen and (max-width: 500px){
+   .container{
+    margin-left: 1em;
+     }
+   }
+   
+
+</style>
+<section class="section" id="about">
+  <div class="container">
+    <div class="form-element-html">
+      <h1>Participant details</h1>
+    </div>
+  </div>
+  <!-- end ngRepeat: element in page track by element.identifier -->
+  <div
+    data-identifier="field33"
+    data-index="1"
+    style="width: 100%"
+    class="even form-element form-element-field33 options-false index-false form-element-1 default-false form-element-type-customText is-required-false -handle"
+  >
+    <div class="form-element-html">
+      <div>
+        {% comment %}
+        
+          {% endcomment %}
+          <div class="full" style="text-align: left"><hr /></div>
+          <input type="hidden" name="field33" data-field-id="field33" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-left: 1em;">
+      <label for="validationCustom01">School Details</label>
+      <p>Name: {{ project_obj.School_Name }}</p>
+      <p>Phone No.: {{ project_obj.School_Phone_no }}</p>
+      <p>Email: {{ project_obj.School_Email_address }}</p>
+      <p>Address: {{ project_obj.School_Address }}</p>
+      <p>State: {{ project_obj.State }}</p>
+      <br />
+
+      <label for="validationCustom01">Student Details</label>
+      <p>Name: {{ project_obj.Student_Name }}</p>
+      <p>Phone No.: {{ project_obj.Contact_no }}</p>
+      <p>Email: {{ project_obj.Email_address }}</p>
+      <p>Address: {{ project_obj.House_Address }}</p>
+      <p>Gender: {{ project_obj.Gender }}</p>
+      <br />
+
+      <label for="validationCustom01">Project Details</label>
+      <p>Title: {{ project_obj.Title_of_your_project }}</p>
+      <p>Problem: {{ project_obj.Question_or_Problem }}</p>
+      <p>Hypothesis: {{ project_obj.Hypothesis_or_possible_solution }}</p>
+      <p>Materials used: {{ project_obj.Materials_needed }}</p>
+      <p>Results: {{ project_obj.Results }}</p>
+      <img
+        src="{{ project_obj.Image_of_Project }}"
+        width="400px"
+        height="400px"
+        alt="project_image"
+      /><br>
+      <p>
+        Video Link:
+        <a href="{{ project_obj.Link_of_your_project }}"
+          >{{ project_obj.Link_of_your_project }}</a
+        >
+      </p>
+      <br />
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block extra_js %} {% endblock %}

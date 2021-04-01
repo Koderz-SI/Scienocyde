@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block extra_css %}
+
+</style>
+{% endblock %}
+
+{% block body %}
+<style >
+    table{
+         width: 100%;
+         font-size: 23px;
+         font-weight: 100;
+         font-family: 'Open Sans Condensed', sans-serif;
+    }
+    @media screen and (max-width: 500px){
+        table{
+            font-size: 18px;
+        }
+    }
+</style>
+
+
+    <section class="section" id="about">
+        <div class="container">
+         
+            <div class="form-page-content ng-pristine   ng-isolate-scope ">
+                  <!-- ngRepeat: element in page track by element.identifier --><div data-identifier="field1" data-index="0" style="width: 100%" class=" form-element ">
+                    <div class="form-element-html"><div ><div style="background-color:" class="heading-cover field-cover "><div style="text-align: left; font-size: 1.6em; padding-top: 10px; padding-bottom: ; color: #000000" class="bold-"><span >YOUR DETAILS</span></div><input type="hidden" data-field-id="field1" name="field1[]" value=""></div></div></div>
+                    </div><!-- end ngRepeat: element in page track by element.identifier --><div data-identifier="field33" data-index="1" style="width: 100%" class=" even form-element form-element-field33 options-false index-false form-element-1 default-false form-element-type-customText is-required-false -handle">
+                    <div class="form-element-html"><div ><div class="absolute-false customText-cover field-cover" style="left: 20px; top: -20px;right: ;bottom: 100px;color: #b5b5b5 !important; "><div class="full" style="text-align: left"><hr ></div><input type="hidden" name="field33" data-field-id="field33"></div></div></div>
+                    <br>
+            <form action="add_host/" method="post">
+                <div class="form-label">
+                  <label for="validationCustom01">Your Full Name</label>
+                   <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="Your Full Name"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="mb-3">
+                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input name="email" type="email" class="form-control" id="exampleFormControlInput1" id="validationCustom01"placeholder="name@example.com" required>
+                </div>
+                <br>
+
+                <div class="form-label">
+                  <label for="validationCustom01">Organization/Institution hosting the contest</label>
+                    <input name="org" type="text" class="form-control" id="validationCustom01" placeholder=""  required>
+                    <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <br>
+
+                  <div class="form-label">
+                    <label for="validationCustom01">Type of Organization/Institution</label>
+                      <select name="type" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Open this select menu    </option>
+                        <option value="College/University">College/University</option>
+                        <option value="Company/Organization">Company/Organization</option>
+                        <option value="Others">Others</option>
+                      </select>
+                     
+                    </div>
+
+
+               <br>
+
+               <div class="form-label">
+                 <label for="validationCustom01">Designation</label>
+                   <input name="designation" type="text" class="form-control" id="validationCustom01" placeholder=""  required>
+                   <div class="valid-feedback">
+                    Looks good!
+                   </div>
+                </div>
+                <br>
+
+                <div class="form-label">
+                  <label for="validationCustom01">Phone no.</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control" id="validationCustom01" placeholder=""  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="form-label">
+                  <label for="validationCustom01">Purpose of Contest</label>
+                  <input name="purpose" type="text" class="form-control" id="validationCustom01" placeholder=""  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <br>
+
+                <br>
+
+                <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Breif detail about your event</label>
+                <textarea name="detail" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <br>
+
+                <div class="form-label">
+                  <label for="validationCustom01">Theme of Project</label>
+                  <input name="theme" type="text" class="form-control" id="validationCustom01" placeholder=""  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="form-label">
+                  <label for="validationCustom01">Guidelines for submission</label>
+                  <input name="guidelines" type="text" class="form-control" id="validationCustom01" placeholder=""  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <br>
+
+
+                <label for="exampleFormControlTextarea1" class="form-label">Eligibility Creteria</label>
+                <br>
+                <select name="age" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu    </option>
+                <option value="Below 12">Below 12</option>
+                <option value="Below 16">Below 16</option>
+                 <option value="Below 18">Below 18</option>
+               </select>
+
+               <br><br>
+                <label for="exampleFormControlTextarea1" class="form-label">Last Submission date</label>
+                <br>
+                <input type="date" id="birthday" name="last_sub">
+                <br>
+                <br>
+              </div>
+              <button type="submit" class="main-button-slider">Submit</button>
+
+              </form>
+              <br>
+                  
+                  
+              </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block extra_js %}
+{% endblock %}

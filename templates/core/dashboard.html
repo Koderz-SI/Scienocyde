@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<style>
+  th,
+  td {
+    border-bottom: 3px solid rgba(241, 85, 106, 1);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+    height: 50px;
+  }
+</style>
+{% endblock %} {% block body %}
+
+<section class="section" id="about">
+  <div class="container">
+    <h1>{{ host_obj.org }}</h1>
+    <a href="{% url 'delete_host' host_obj.username %}"
+      ><button type="button" class="btn btn-outline-danger">
+        End Event
+      </button></a
+    >
+    <table style="width: 100%">
+      <tr>
+        <th>S.No.</th>
+        <th>Title</th>
+        <th>Submission Date</th>
+        <th>Details</th>
+      </tr>
+      {% for project in projects %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ project.Title_of_your_project }}</td>
+        <td>{{ project.date|date:"d-m-Y" }}</td>
+        <td><a href="{% url 'project_details' project.id %}">Details</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+
+{% endblock %} {% block extra_js %} {% endblock %}

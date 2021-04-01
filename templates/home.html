@@ -1,0 +1,104 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<style>
+  .login {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+  }
+  {% comment %} @media screen and (max-width: 500px) {
+    .card-img-top {
+      width: 30rem;
+      height: 15rem;
+      padding-left: 0px;
+    }
+    .card {
+      width: 50%;
+      margin-left: 5px;
+    }
+
+    .main-button-slider {
+      padding: 2px;
+    }
+  }
+  /* Add a hover effect for buttons */
+  .login:hover {
+    opacity: 0.8;
+  } {% endcomment %}
+</style>
+{% endblock %} {% block body %} {% if user.is_authenticated %}
+<!-- ** Welcome Area Start ** -->
+<div class="welcome-area" id="welcome">
+  <!-- ** Header Text Start ** -->
+  <div class="header-text">
+    <div class="container">
+      <div class="row">
+        <div
+          class="left-text col-lg-8 col-md-12 col-sm-12 col-xs-12"
+          data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
+        >
+          <h1 style="margin-top: -20px">
+            Welcome to the Science <em>FAIR</em>
+          </h1>
+          <p>We welcome you to the most exciting Science Fair ever!</p>
+
+          {% if host_obj %}
+          <a
+            href="{% url 'host_dashboard' username %}"
+            class="main-button-slider"
+          >
+            Dashboard
+          </a>
+          {% else %}
+          <a href="/core/host" class="main-button-slider">Host</a>
+          {% endif %}
+
+          <a
+            href="/core/detail"
+            style="margin: 3px; clear: both"
+            class="main-button-slider"
+            >Science Fair
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% else %}
+
+  <div class="header-text">
+    <div class="container">
+      <div class="row" style="padding-top: 6em; padding-left: 2em">
+        <div
+          class="left-text col-md-12 col-sm-12 col-xs-12"
+          data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
+        >
+          <div class="card">
+            <img
+              src="https://thumbs.dreamstime.com/b/forgot-password-computer-concept-unhappy-man-near-account-login-flat-vector-male-character-design-landing-page-web-poster-184010038.jpg"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body" style="margin-bottom: 30px">
+              <h3 class="card-title" style="padding-bottom: 1em">
+                You are not logged in!
+              </h3>
+
+              <a href="{% url 'login' %}" class="main-button-slider">Log In</a>
+
+              <a href="{% url 'signup' %}" class="main-button-slider"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+<!-- ** Header Text End ** -->
+{% endblock %} {% block extra_js %} {% endblock %}

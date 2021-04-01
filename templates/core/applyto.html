@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+
+<style>
+  {% comment %} @media screen and (max-width: 500px) {
+    .container {
+      margin-left: 1em;
+      font-size: 15px;
+    }
+  } {% endcomment %}
+</style>
+
+{% endblock %} {% block body %}
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="form-element-html">
+      <div>
+        <div style="background-color: " class="heading-cover field-cover">
+          <div
+            style="
+              text-align: left;
+              font-size: 1.6em;
+              padding-top: 10px;
+              padding-bottom: ;
+              color: #000000;
+            "
+            class="bold-"
+          >
+            <span>DETAILS</span>
+          </div>
+          <input
+            type="hidden"
+            data-field-id="field1"
+            name="field1[]"
+            value="SCHOOL DETAILS"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+    <hr />
+
+    <div class="container" style="font-size: 20px">
+      <label for="validationCustom01"
+        ><b>Organization/Institution hosting the contest:</b></label
+      >
+      <p style="font-size: 18px">{{ host_obj.org }}</p>
+      <br />
+
+      <label for="validationCustom01"><b>Brief detail about event: </b></label>
+      <p style="font-size: 18px">{{ host_obj.detail }}</p>
+      <br />
+
+      <label for="validationCustom01"><b>Eligibility Criteria: </b></label>
+      <p style="font-size: 18px">{{ host_obj.elig_cri }}</p>
+      <br />
+
+      <label for="validationCustom01"><b>Theme of Project </b></label>
+      <p style="font-size: 18px">{{ host_obj.theme }}</p>
+      <br />
+
+      <label for="validationCustom01"><b>Last Date of submission </b></label>
+      <p style="font-size: 18px">{{ host_obj.last_sub }}</p><br/>
+      <label for="validationCustom01"><b>Guidelines for submission </b></label>
+      <p style="font-size: 18px">{{ host_obj.guidelines }}</p>
+      <br /><br />
+
+      <a href="{% url 'participant' host_id %}"
+        ><button type="submit" class="main-button-slider">Apply Now</button></a
+      >
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block extra_js %} {% endblock %}
