@@ -1,5 +1,5 @@
 # Scienocyde
-<h3>Deployed App: <a>http://scienocyde.pythonanywhere.com/</a></h3>
+<h3>Deployed App: <a href="http://scienocyde.pythonanywhere.com/">Scienocyde</a></h3>
 <p>In this covid period, school and college-level science fairs are hardly taking place. So, we have built a website where different organizing teams can host their events, and students can participate in a science fair by going through the list and details of different organizations. Also, people who aren't participating can go through the projects and learn.</p>
 
 <h4>Brief:</h4>
