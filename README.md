@@ -9,3 +9,5 @@
 </ul>
 
 <p>During the offline Science Exhibitions, all the students were allowed to go through the projects irrespective of they are a participant or not! Thus, keeping this in mind, we have a "Projects" section where all the projects submitted by different students for various organizations are lined up. So, one can easily go through the projects and learn.</p>
+
+<h5>Made with ❤ by Sanskriti and Irit</h5>
